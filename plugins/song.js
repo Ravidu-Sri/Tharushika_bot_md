@@ -17,7 +17,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎷 *RUXPABOT YOUTUBE SONG DOWNLOAD* 🎷
+🎷 *THARUSHIKA_BOT YOUTUBE SONG DOWNLOAD* 🎷
 
 title: ${data.title}
 description: ${data.description}
@@ -64,7 +64,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-🎥 *RUXPABOT YOUTUBE VIDEO DOWNLOAD* 🎥
+🎥 *THARUSHIKA_BOT YOUTUBE VIDEO DOWNLOAD* 🎥
 
 title: ${data.title}
 description: ${data.description}
