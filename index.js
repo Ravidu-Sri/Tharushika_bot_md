@@ -21,13 +21,13 @@ const { File } = require('megajs')
 const ownerNumber = ['94723423602']
 
 //===================SESSION-AUTH============================
-if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
+if (!fs.existsSync(__dirname + '/session_id/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
 const sessdata = config.SESSION_ID
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
-fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
+fs.writeFile(__dirname + '/session_id/creds.json', data, () => {
 console.log("Session downloaded ✅")
 })})}
 
@@ -46,8 +46,8 @@ const {readEnv} = require('./lib/database')
 const config = await readEnv();
 const prefix = config.PREFIX
 //=============================================
-console.log("Connecting RUXPABOT 😶🚫...");
-const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
+console.log("Connecting THARUSHIKA_BOT 😶🚫...");
+const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/session_id/')
 var { version } = await fetchLatestBaileysVersion()
 
 const conn = makeWASocket({
@@ -76,7 +76,7 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to Ravidu x Podda ✅')
 
-let up = `RU-X-PA-BOT connected successful ✅\n\nPREFIX: ${prefix}`;
+let up = `THARUSHIKA_BOT connected successful ✅\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/8bd67d888923904cbaadb.jpg` }, caption: up })
   
